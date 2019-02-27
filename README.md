@@ -12,7 +12,7 @@ A react component to display components according to a value selected.
 
 ```javascript
   import DropDown from 'component-drop-down';
-  import Selection from './Selection;
+  import Selection from './Selection';
 
   class Example {
 
