@@ -5,7 +5,7 @@ A react component to display components according to a value selected.
 ## Installation
 
 ```bash
-  yarn add component-drop-down
+  yarn add @y2z/dropdown-components
 ```
 
 ## Usage

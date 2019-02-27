@@ -1,5 +1,5 @@
 {
-  "name": "component-drop-down",
+  "name": "@y2z/dropdown-components",
   "version": "0.1.0",
   "description": "drop down for components",
   "repository": "git@github.com:karkipy/dropdown-component.git",
