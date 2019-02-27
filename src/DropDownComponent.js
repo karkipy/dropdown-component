@@ -1,19 +1,11 @@
-// @flow
+
 import React, { Component } from 'react';
 
 
-type Props= {
-  default: string,
-  data: Array<{
-    title: string,
-    component: React.Node
-  }>,
-  style: {},
-}
 
 const EmptyComponent = () => (<div />);
 
-class DropDownComponent extends Component<Props> {
+class DropDownComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {

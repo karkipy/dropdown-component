@@ -4,6 +4,7 @@
   "description": "drop down for components",
   "repository": "git@github.com:karkipy/dropdown-component.git",
   "main": "build/index.js",
+  "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0"
   },
