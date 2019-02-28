@@ -117,7 +117,9 @@ var DropDownComponent = function (_Component) {
 
       var _props = this.props,
           data = _props.data,
-          style = _props.style;
+          style = _props.style,
+          optionHeader = _props.optionHeader,
+          componentStyle = _props.componentStyle;
       var value = this.state.value;
 
       var Wrapper = data[value] ? data[value].component : EmptyComponent;
@@ -133,10 +135,16 @@ var DropDownComponent = function (_Component) {
               return _this2.setState({ value: e.nativeEvent.target.value });
             }
           },
-          _react2.default.createElement(
+          optionHeader ? _react2.default.createElement(
             'option',
             null,
-            ' -- select sorting algorithm -- '
+            ' ',
+            optionHeader,
+            ' '
+          ) : _react2.default.createElement(
+            'option',
+            null,
+            '  '
           ),
           data.map(function (d, idx) {
             return _react2.default.createElement(
@@ -147,7 +155,11 @@ var DropDownComponent = function (_Component) {
             );
           })
         ),
-        _react2.default.createElement(Wrapper, null)
+        _react2.default.createElement(
+          'div',
+          { style: componentStyle },
+          _react2.default.createElement(Wrapper, null)
+        )
       );
     }
   }]);

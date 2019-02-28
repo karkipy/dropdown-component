@@ -14,7 +14,7 @@ class DropDownComponent extends Component {
   }
 
   render() {
-    const { data, style } = this.props;
+    const { data, style, optionHeader, componentStyle } = this.props;
     const { value } = this.state;
     const Wrapper = data[value] ? data[value].component : EmptyComponent;
     return (
@@ -24,10 +24,12 @@ class DropDownComponent extends Component {
           style={style}
           onChange={e => this.setState({ value: e.nativeEvent.target.value })}
         >
-          <option> -- select sorting algorithm -- </option>
+         {optionHeader ?<option> {optionHeader} </option> : <option>  </option>}
           {data.map(((d, idx) => <option key={d} value={idx}> {d.title}</option>))}
         </select>
-        <Wrapper />
+        <div style={componentStyle}>
+         <Wrapper />
+        </div>
       </React.Fragment>
     );
   }

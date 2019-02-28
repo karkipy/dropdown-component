@@ -20,7 +20,10 @@ A react component to display components according to a value selected.
 
       return (
         <DropDown
+          style={{ width: '100%' }}
           data={[ { title: 'Selection', component: <Selection />}]}
+          optionHeader="-- select sorting algorithm --"
+          componentStyle={{}}
         />
       )
     }
@@ -28,6 +31,12 @@ A react component to display components according to a value selected.
 
 ```
 
+## Parameters
+
+ - style: style object for the select element
+ - data: An array of object containing title (string ) and the component to render
+ - optionHeader: the default option in a select if not provided will be empty
+ - componentStyle: style object for the component container
 
 ## Output
 
